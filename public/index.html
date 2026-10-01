@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messi vs Ronaldo · Stadium</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #05070d; overflow: hidden; }
+    canvas { display: block; width: 100vw; height: 100vh; }
+    body.started canvas { cursor: none; }
+    #start {
+      position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 14px; background: rgba(5, 7, 13, 0.72); color: #cfd6ea; font: 16px system-ui, sans-serif; text-align: center;
+    }
+    #start button {
+      font: 800 28px system-ui, sans-serif; padding: 18px 42px; border: 0; border-radius: 999px; cursor: pointer;
+      color: #fff; background: linear-gradient(135deg, #004D98, #A50044); box-shadow: 0 0 0 4px #EDBB00;
+    }
+    #start p { margin: 0; max-width: 420px; line-height: 1.5; }
+    #phoneUrl b { display: block; font-size: 22px; color: #f2c94c; user-select: all; }
+    body.started #start { display: none; }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="start">
+    <button id="startBtn" type="button">▶ Start</button>
+    <p>Click to start (turns the sound on).<br>F = fullscreen · M = mute<br>
+      S = start / pause timer · E = end round · R = reset timer<br>
+      Test: 1 / 2 = 1 coin for Messi / Ronaldo, Q / W = 100 coins</p>
+    <p id="phoneUrl"></p>
+  </div>
+  <script>
+    fetch('/api/info').then((r) => r.json()).then((info) => {
+      const urls = info.controlUrls || [];
+      if (!urls.length) return;
+      const p = document.getElementById('phoneUrl');
+      p.textContent = 'Phone controller (same Wi-Fi):';
+      const b = document.createElement('b');
+      b.textContent = urls[0];
+      p.appendChild(b);
+    }).catch(() => {});
+  </script>
+  <script src="/game.js"></script>
+</body>
+</html>

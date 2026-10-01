@@ -1,0 +1,33 @@
+{
+  "port": 3000,
+  "teams": {
+    "messi": { "name": "MESSI", "number": "10", "celebrate": "¡VAMOS!" },
+    "ronaldo": { "name": "RONALDO", "number": "7", "celebrate": "SIUUU!" }
+  },
+  "roundSeconds": 180,
+  "intermissionSeconds": 12,
+  "autoStartNextRound": true,
+  "goalsPerCoin": 5,
+  "tip": "Send a gift + comment MESSI or RONALDO!",
+  "boardText": "SEND A GIFT TO SCORE FOR YOUR TEAM!",
+  "gifts": {
+    "messi": [
+      { "name": "GOAT", "emoji": "🐐", "coins": 1 },
+      { "name": "Finger Heart", "emoji": "🫰", "coins": 5 },
+      { "name": "Hand Hearts", "emoji": "🫶", "coins": 100 },
+      { "name": "250 Coin Gift", "emoji": "💎", "coins": 250 },
+      { "name": "Glowing Jellyfish", "emoji": "🪼", "coins": 1000 },
+      { "name": "5K Coin Gift", "emoji": "🦁", "coins": 5000 },
+      { "name": "10K Coin Gift", "emoji": "👑", "coins": 10000 }
+    ],
+    "ronaldo": [
+      { "name": "GG", "emoji": "🎮", "coins": 1 },
+      { "name": "Spinning Soccer", "emoji": "⚽", "coins": 5 },
+      { "name": "Super GG", "emoji": "🕹️", "coins": 100 },
+      { "name": "250 Coin Gift", "emoji": "💎", "coins": 250 },
+      { "name": "Galaxy", "emoji": "🌌", "coins": 1000 },
+      { "name": "5K Coin Gift", "emoji": "🦁", "coins": 5000 },
+      { "name": "10K Coin Gift", "emoji": "👑", "coins": 10000 }
+    ]
+  }
+}

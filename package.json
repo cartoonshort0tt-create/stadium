@@ -1,0 +1,13 @@
+{
+  "name": "messi-vs-ronaldo-stadium",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-screen landscape Messi vs Ronaldo stadium for TikTok Live: gifts become dribble-and-score attacks, controlled from a phone on the local network.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=16"
+  }
+}
